@@ -1,8 +1,5 @@
 [
     {
-        "imagem": "blocks",
-        "questionAnswered": 1,
-        "level": "facil",
         "title": "NLW 5 Flutter",
         "questions": [
             {
@@ -24,7 +21,7 @@
                 ]
             },
             {
-                "title": "Está curtindo o Flutter?",
+                "title": "Está curtindo o flu?",
                 "awnsers": [
                     {
                         "title": "Estou curtindo"
@@ -41,6 +38,9 @@
                     }
                 ]
             }
-        ]
+        ],
+        "questionAnswered": 1,
+        "imagem": "blocks",
+        "level": "facil"
     }
 ]

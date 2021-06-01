@@ -22,13 +22,18 @@ class HomeController {
 
   void getUser() async {
     state = HomeState.loading;
-    user = await repository.getUser();
+    Future.delayed(const Duration(seconds: 10));
+    user = await Future.any([
+      Future.value(repository.getUser()).timeout(const Duration(seconds: 6))
+    ]);
     state = HomeState.success;
   }
 
   void getQuizzes() async {
     state = HomeState.loading;
-    quizzes = await repository.getQuizzes();
+    quizzes = await Future.any([
+      Future.value(repository.getQuizzes()).timeout(const Duration(seconds: 6))
+    ]);
     state = HomeState.success;
   }
 }
